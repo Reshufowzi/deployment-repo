@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: lwm-alpha
+  name: mypod
   labels:
-    app: lwm-alpha
+    app: mypod
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: lwm-alpha
+      app: mypod
   template:
     metadata:
       labels:
-        app: lwm-alpha
+        app: mypod
     spec:
       containers:
         - name: cont1
-          image: 992382429239.dkr.ecr.ap-south-1.amazonaws.com/lwm-alpha:13-35aeb14
+          image: 128913199644.dkr.ecr.us-east-1.amazonaws.com/myecrrepo:9-abf1dc5
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
@@ -30,3 +30,4 @@ spec:
           env:
             - name: ENV
               value: "dev"
+
