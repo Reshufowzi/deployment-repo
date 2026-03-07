@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: lwm-alpha-svc
+  name: mypod-svc
   labels:
-    app: lwm-alpha
+    app: mypod
 spec:
   type: LoadBalancer
   selector:
-    app: lwm-alpha
+    app: mypod
   ports:
     - name: http
       protocol: TCP
