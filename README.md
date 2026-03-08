@@ -1,5 +1,5 @@
 # deployment-repo
-
+```
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -33,3 +33,4 @@ spec:
             - name: ENV
               value: "dev"
 
+```
